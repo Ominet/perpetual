@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>nz_usehook</name>
+	<displayName><![CDATA[Utilisation des hooks presta]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Ce module sert à utiliser les hooks presta afin de surcharger des classes comme Product ou Carrier etc]]></description>
+	<author><![CDATA[Nizar]]></author>
+	<tab><![CDATA[administration]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

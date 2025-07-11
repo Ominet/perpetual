@@ -1,0 +1,9 @@
+parent: classic
+name: perpetual
+display_name: Perpetual
+version: 1.0.0
+author:
+  name: "Nizar"
+  email: "nizar.zehri@gmail.com"
+  url: "https://www.linkedin.com/in/nizar-zehri"
+

@@ -1,0 +1,18 @@
+ul.top-menu[data-depth="1"]{
+    box-shadow: 2px 1px 11px 2px rgba(0, 0, 0, .1);
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    width: 100%;
+    min-width: 100%;
+    padding: 12px 0 5px 0;
+    margin: 0;
+}
+.top-menu div.sub-menu{
+    padding: 43px 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+#nz-sub-categories-list img{border-radius: 50%}
+#nz-sub-categories-list .item{float: left;margin: 20px;text-align: center;}
