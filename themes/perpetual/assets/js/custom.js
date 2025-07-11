@@ -1,3 +1,4 @@
+/* Exo 3 */
 $(document).ready(function() {
 
     if($('.owl-carousel').length) 

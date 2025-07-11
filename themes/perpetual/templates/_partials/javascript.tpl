@@ -39,4 +39,5 @@
     {/foreach}
   </script>
 {/if}
+<!-- Carousel -->
 <script type="text/javascript" src="{$urls.base_url}themes/perpetual/assets/owlcarousel/owl.carousel.js"></script>

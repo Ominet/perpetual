@@ -23,6 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {if isset($subcategories) && $subcategories|@count}
+    <!-- Exo 3 -->
     <div class="container">
         <div class="row">
             <div class="large-12 columns">

@@ -31,5 +31,6 @@
     {$stylesheet.content}
   </style>
 {/foreach}
+<!-- Carousel -->
 <link rel="stylesheet" href="{$urls.base_url}themes/perpetual/assets/owlcarousel/assets/owl.theme.default.min.css" type="text/css" media="all">
 <link rel="stylesheet" href="{$urls.base_url}themes/perpetual/assets/owlcarousel/assets/owl.carousel.min.css" type="text/css" media="all">
