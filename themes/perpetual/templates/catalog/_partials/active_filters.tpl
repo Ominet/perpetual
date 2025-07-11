@@ -22,20 +22,22 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-header">
-    {if $listing.pagination.items_shown_from == 1}
-        <div class="block-category card card-block">
-            <h1 class="h1">{$category.name}</h1>
-            <div class="block-category-inner">
-                {if $category.description}
-                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
-                {/if}
-                {if $category.image.large.url}
-                    <div class="category-cover">
-                        <img src="{$category.image.large.url}" alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">
-                    </div>
-                {/if}
-            </div>
-        </div>
-    {/if}
-</div>
+<section id="js-active-search-filters" class="{if $activeFilters|count}active_filters{else}hide{/if}">
+  {block name='active_filters_title'}
+    <h1 class="h6 {if $activeFilters|count}active-filter-title{else}hidden-xs-up{/if}">{l s='Active filters' d='Shop.Theme.Global'}</h1>
+  {/block}
+
+  {if $activeFilters|count}
+    <ul>
+      {foreach from=$activeFilters item="filter"}
+        {block name='active_filters_item'}
+          <li class="filter-block">
+            {l s='%1$s: ' d='Shop.Theme.Catalog' sprintf=[$filter.facetLabel]}
+            {$filter.label}
+            <a class="js-search-link" href="{$filter.nextEncodedFacetsURL}"><i class="material-icons close">&#xE5CD;</i></a>
+          </li>
+        {/block}
+      {/foreach}
+    </ul>
+  {/if}
+</section>

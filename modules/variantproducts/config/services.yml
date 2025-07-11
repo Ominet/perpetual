@@ -1,9 +1,0 @@
-services:
-  variantproducts.custom_category_search_provider:
-    class: Variantproducts\Search\CustomCategoryProductSearchProvider
-    arguments:
-      - '@=service("prestashop.adapter.legacy.context").getContext().language.id'
-    public: true
-
-  prestashop.core.product.search.category_search_provider:
-    alias: variantproducts.custom_category_search_provider

@@ -22,6 +22,26 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
+{if isset($subcategories) && $subcategories|@count}
+    <div class="container">
+        <div class="row">
+            <div class="large-12 columns">
+                <div id="nz-sub-categories-list" class="owl-carousel owl-theme">
+                   {foreach from=$subcategories item=sub}
+                       <div class="item">
+                        <a href="{$sub['url']}" class="bubble-wrapper">
+                          <div class="bubble-inner-wrapper">
+                            <img src="{$sub['image']["bySize"]["small_default"]["url"]}" alt="{$sub['name']}">
+                            <p class="subcat-title">{$sub['name']} ({$sub['nb_products']})</p>
+                          </div>
+                        </a>
+                      </div>
+                   {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
 <div id="js-product-list-header">
     {if $listing.pagination.items_shown_from == 1}
         <div class="block-category card card-block">

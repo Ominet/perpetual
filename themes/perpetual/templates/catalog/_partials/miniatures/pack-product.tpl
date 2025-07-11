@@ -22,20 +22,33 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-header">
-    {if $listing.pagination.items_shown_from == 1}
-        <div class="block-category card card-block">
-            <h1 class="h1">{$category.name}</h1>
-            <div class="block-category-inner">
-                {if $category.description}
-                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
-                {/if}
-                {if $category.image.large.url}
-                    <div class="category-cover">
-                        <img src="{$category.image.large.url}" alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">
-                    </div>
-                {/if}
-            </div>
+{block name='pack_miniature_item'}
+  <article>
+    <div class="card">
+      <div class="pack-product-container">
+        <div class="thumb-mask">
+          <div class="mask">
+            <a href="{$product.url}" title="{$product.name}">
+              <img
+                src="{$product.cover.medium.url}"
+                alt="{$product.cover.legend}"
+                data-full-size-image-url="{$product.cover.large.url}"
+              >
+            </a>
+          </div>
         </div>
-    {/if}
-</div>
+        <div class="pack-product-name">
+          <a href="{$product.url}" title="{$product.name}">
+            {$product.name}
+          </a>
+        </div>
+        <div class="pack-product-price">
+          <strong>{$product.price}</strong>
+        </div>
+        <div class="pack-product-quantity">
+          <span>x {$product.pack_quantity}</span>
+        </div>
+      </div>
+    </div>
+  </article>
+{/block}

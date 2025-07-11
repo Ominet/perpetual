@@ -22,20 +22,10 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-<div id="js-product-list-header">
-    {if $listing.pagination.items_shown_from == 1}
-        <div class="block-category card card-block">
-            <h1 class="h1">{$category.name}</h1>
-            <div class="block-category-inner">
-                {if $category.description}
-                    <div id="category-description" class="text-muted">{$category.description nofilter}</div>
-                {/if}
-                {if $category.image.large.url}
-                    <div class="category-cover">
-                        <img src="{$category.image.large.url}" alt="{if !empty($category.image.legend)}{$category.image.legend}{else}{$category.name}{/if}">
-                    </div>
-                {/if}
-            </div>
-        </div>
-    {/if}
-</div>
+{extends file='catalog/listing/product-list.tpl'}
+
+{block name='product_list_header'}
+  <h1>{l s='List of products by brand %brand_name%' sprintf=['%brand_name%' => $manufacturer.name] d='Shop.Theme.Catalog'}</h1>
+  <div id="manufacturer-short_description">{$manufacturer.short_description nofilter}</div>
+  <div id="manufacturer-description">{$manufacturer.description nofilter}</div>
+{/block}
