@@ -29,7 +29,7 @@
     </a>
   </div>  
   <div class="media-body">
-    <div class="product-category"><b>{$product.lastSubCategory}</b></div>
+    <div class="product-subCategory"><b>{$product.lastSubCategory}</b></div>
     <span class="product-name">{$product.name}</span>
     <span class="product-quantity">x{$product.quantity}</span>
     <span class="product-price float-xs-right">{$product.price}</span>

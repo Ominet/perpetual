@@ -2,7 +2,7 @@
 
 class Product extends ProductCore
 {
-	    //Override Nizar (Exercice 1) get last SubCategory name 
+	//Override Nizar (Exercice 1) get last SubCategory name 
 	public static function getLastChildCategory($id_product = '', $id_lang = null)
 	{
 	    if (!$id_lang) {

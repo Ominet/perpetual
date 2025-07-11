@@ -188,7 +188,7 @@ class Cart extends CartCore
 
                 $additionalRow = Product::getProductProperties((int) $this->id_lang, $row);
                 $row['reduction'] = $additionalRow['reduction'];
-                //override Nizar
+                //override Nizar (Excercice 1)
                 $row['lastSubCategory'] = Product::getLastChildCategory($row['id_product']);
                 //End
                 $row['reduction_without_tax'] = $additionalRow['reduction_without_tax'];
